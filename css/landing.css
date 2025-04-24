@@ -1,0 +1,377 @@
+  .container {
+    display: flex;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+  
+  .main {
+    flex-grow: 1;
+    padding: 0;
+  }
+  
+  .top-images {
+    display: flex;
+    height: 800px;
+  }
+  
+  .top-images .image {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .top-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  .top-images .label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'HelveticaNeueMedium', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #F0F2F4;
+    z-index: 2;
+  }
+  
+  .image.rafael:hover img {
+    content: url('../Assets/marvin5.jpg');
+  }
+  
+  .image.marvin:hover img {
+    content: url('../Assets/marvin4.jpg');
+  }
+  
+  .intro {
+    font-family: 'HelveticaNeueMedium', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    padding: 20px 10px 40px 10px;
+    line-height: 1.4;
+  }
+  
+  .achievement {
+    padding: 0 20px 120px 10px;
+  }
+  
+  .achievement h2 {
+    font-size: 10px;
+    font-family: 'SuisseMono', monospace;
+    font-weight: normal;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+    display: block;
+    padding-bottom: 4px;
+    width: 100%;
+}
+  
+  .achievement-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 0;
+  }
+  
+  .achievement-item {
+    width: 32%;
+  }
+  
+  .achievement-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .achievement-info {
+    font-size: 10px;
+    margin-bottom: 2px;
+    font-family: 'SuisseMono', monospace;
+  }
+  
+  .achievement-date {
+    font-size: 10px;
+    text-align: right;
+    font-family: 'SuisseMono', monospace;
+  }
+  
+  .view-button {
+    margin-top: 20px;
+    float: right;
+    padding: 8px 16px;
+    font-size: 10px;
+    font-family: 'SuisseMono', monospace;
+    background: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .view-button a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .view-button:hover {
+    background: black;
+    color: #F0F2F4;
+  }
+
+  .view-button:hover a{
+    color: #F0F2F4;
+  }
+  
+  .hero-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  footer {
+    background: #F0F2F4;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-inner {
+    font-family: 'SuisseMono', monospace;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 100px 0px 0px;
+    font-size: 12px;
+  }
+
+  /* Responsive styles for tablet and mobile */
+
+/* Tablet (768px to 992px) */
+@media (max-width: 992px) {
+  
+  .main {
+    width: 100%;
+  }
+  
+  /* Top images section */
+  .top-images {
+    height: 600px;
+  }
+  
+  .top-images .label {
+    font-size: 28px;
+  }
+  
+  /* Intro section */
+  .intro {
+    font-size: 36px;
+    padding: 20px 20px 30px 20px;
+  }
+  
+  /* Achievement section */
+  .achievement {
+    padding: 0 20px 80px 20px;
+  }
+  
+  .achievement-grid {
+    gap: 15px;
+  }
+  
+  .achievement-item {
+    width: 31%;
+  }
+  
+  .achievement-img {
+    height: 200px;
+  }
+  
+  /* Hero image */
+  .hero-img {
+    height: 400px;
+  }
+  
+  /* Footer */
+  .footer-inner {
+    padding: 0 20px;
+  }
+}
+
+/* Small Tablet (576px to 768px) */
+@media (max-width: 768px) {
+  /* Sidebar (if present) */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 15px 0;
+  }
+  
+  .sidebar-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  
+  .sidebar-top h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .sidebar-top a {
+    margin: 0 10px 10px 10px;
+    font-size: 12px;
+  }
+  
+  .sidebar-bottom {
+    display: none;
+  }
+  
+  /* Top images section */
+  .top-images {
+    height: 500px;
+  }
+  
+  .top-images .label {
+    font-size: 24px;
+  }
+  
+  /* Intro section */
+  .intro {
+    font-size: 32px;
+    padding: 20px 15px;
+    line-height: 1.3;
+  }
+  
+  /* Achievement section */
+  .achievement {
+    padding: 0 15px 60px 15px;
+  }
+  
+  .achievement h2 {
+    font-size: 9px;
+  }
+  
+  .achievement-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .achievement-item {
+    width: 48%;
+  }
+  
+  .achievement-img {
+    height: 180px;
+  }
+  
+  /* Hero image */
+  .hero-img {
+    height: 350px;
+  }
+}
+
+/* Mobile (Up to 576px) */
+@media (max-width: 576px) {
+  /* Top images section */
+  .top-images {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .top-images .image {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .top-images .label {
+    font-size: 24px;
+  }
+  
+  /* Intro section */
+  .intro {
+    font-size: 24px;
+    padding: 20px 15px;
+    line-height: 1.3;
+  }
+  
+  /* Achievement section */
+  .achievement {
+    padding: 0 15px 40px 15px;
+  }
+  
+  .achievement-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .achievement-item {
+    width: 100%;
+  }
+  
+  .achievement-img {
+    height: 220px;
+  }
+  
+  .achievement-info, 
+  .achievement-date {
+    font-size: 9px;
+  }
+  
+  .view-button {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Hero image */
+  .hero-img {
+    height: 250px;
+  }
+  
+  /* Footer */
+  .footer-inner {
+    padding: 0 15px;
+    font-size: 10px;
+  }
+}
+
+/* Small Mobile (Up to 375px) */
+@media (max-width: 375px) {
+  /* Top images section */
+  .top-images .image {
+    height: 250px;
+  }
+  
+  .top-images .label {
+    font-size: 20px;
+  }
+  
+  /* Intro section */
+  .intro {
+    font-size: 20px;
+    padding: 15px 10px;
+  }
+  
+  /* Achievement section */
+  .achievement h2 {
+    font-size: 8px;
+  }
+  
+  .achievement-img {
+    height: 180px;
+  }
+  
+  /* Hero image */
+  .hero-img {
+    height: 200px;
+  }
+}

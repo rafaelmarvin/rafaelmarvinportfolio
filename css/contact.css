@@ -1,0 +1,198 @@
+/* Main content styles */
+.container {
+    display: flex;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 0;
+}
+
+/* Contact header section */
+.contact-header {
+    display: flex;
+    padding: 40px 20px 60px 0px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-title {
+    flex: 1;
+}
+
+.contact-title h1 {
+    font-family: 'HelveticaNeueMedium', sans-serif;
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 1;
+
+}
+
+.contact-title p {
+    font-family: 'Inter Display', sans-serif;
+    font-size: 14px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.contact-image {
+    flex: 1;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+}
+
+.contact-image img {
+    width: 500px;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Contact section */
+.contact-section {
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-label {
+    font-family: 'HelveticaNeueMedium', sans-serif;
+    font-size: 64px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-label,
+.contact-item.active .contact-label {
+    color: #000;
+}
+
+/* Important: Make sure these styles don't get overridden */
+.contact-info {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'HelveticaNeueMedium', sans-serif;
+    font-size: 18px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: auto !important; /* Ensure links are clickable */
+    z-index: 10; /* Make sure it's above other elements */
+}
+
+/* Add specific styles for active state */
+.contact-item.active .contact-info {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#social-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+
+.social-link {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #002391;
+}
+
+/* Footer styles */
+footer {
+    background: #F0F2F4;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 85px;
+}
+
+.footer-inner {
+    font-family: 'SuisseMono', monospace;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 20px 0px 0px;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .contact-title h1 {
+        font-size: 100px;
+    }
+    
+    .contact-label {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-header {
+        flex-direction: column;
+    }
+    
+    .contact-image {
+        margin-top: 40px;
+        height: 400px;
+    }
+    
+    .contact-title h1 {
+        font-size: 80px;
+    }
+    
+    .contact-label {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-title h1 {
+        font-size: 60px;
+    }
+    
+    .contact-label {
+        font-size: 28px;
+    }
+    
+    .contact-info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title h1 {
+        font-size: 48px;
+    }
+    
+    .contact-label {
+        font-size: 24px;
+    }
+    
+    .contact-item {
+        padding: 20px 0;
+    }
+    
+    .contact-info {
+        position: relative;
+        top: auto;
+        transform: none;
+        margin-top: 10px;
+        text-align: left;
+    }
+    
+    #social-info {
+        text-align: left;
+    }
+}

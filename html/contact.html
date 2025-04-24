@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rafael Marvin - Contact</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="shortcut icon" href="../Assets/marv.png" type="image/x-icon">
+  <!-- Add inline script to ensure it runs before the page loads -->
+  <script>
+    // This ensures we can check if the main script loaded
+    window.scriptLoaded = false;
+  </script>
+</head>
+<body>
+    <header>
+        CURRENTLY OPEN TO WORK FOR UI/UX DESIGNER, SYSTEM ANALYST, BUSINESS ANALYST
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+          <div class="sidebar-top">
+            <h1>RAFAEL MARVIN</h1>
+            <a href="landing.html">HOME</a>
+            <a href="achievement.html">WHAT I'VE DONE</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+          <div class="sidebar-bottom">
+            <img src="../Assets/logomarvin.png" alt="MARV Logo" />
+          </div>
+        </aside>
+
+        <main class="main">
+            <div class="contact-header">
+                <div class="contact-title">
+                    <h1>FIND ME<br>AT</h1>
+                    <p>Let's stay connected — find me on social media or reach out directly through the links below.</p>
+                </div>
+                <div class="contact-image">
+                    <img src="../Assets/marvin3.jpg" alt="Rafael Marvin">
+                </div>
+            </div>
+            
+            
+            <div class="contact-section">
+                <div class="contact-item" id="email-item">
+                    <div class="contact-label">EMAIL</div>
+                    <div class="contact-info" id="email-info">@rafaelmarvin726@gmail.com</div>
+                </div>
+                
+                
+                <div class="contact-item" id="cellphone-item">
+                    <div class="contact-label">CELLPHONE</div>
+                    <div class="contact-info" id="cellphone-info">+62 898 - 6471 - 560</div>
+                </div>
+                
+                
+                <div class="contact-item" id="social-item">
+                    <div class="contact-label">SOCIAL MEDIA</div>
+                    <div class="contact-info" id="social-info">
+                        <a href="https://www.linkedin.com/in/rafael-marvin-sowarahardja/" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://www.instagram.com/rafaelmrvnn/" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://wa.me/628986471560" target="_blank" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <div class="footer-inner">
+                  ⓒ 2025 Rafael Marvin. All Rights Reserved.
+                </div>
+              </footer>
+        </main>
+    </div>
+
+    <!-- Reference the external JavaScript file -->
+    <script src="../js/script.js"></script>
+    
+    <!-- Fallback script in case the external script fails to load -->
+    <script>
+        // Check if the main script loaded after a short delay
+        setTimeout(function() {
+            if (!window.scriptLoaded) {
+                console.error("External script did not load properly. Using fallback.");
+                
+                // Simple fallback implementation
+                document.querySelectorAll('.contact-item').forEach(item => {
+                    const info = item.querySelector('.contact-info');
+                    
+                    // Show on hover
+                    item.addEventListener('mouseenter', () => {
+                        info.style.opacity = '1';
+                        info.style.visibility = 'visible';
+                    });
+                    
+                    // Hide on mouse leave if not active
+                    item.addEventListener('mouseleave', () => {
+                        if (!item.classList.contains('active')) {
+                            info.style.opacity = '0';
+                            info.style.visibility = 'hidden';
+                        }
+                    });
+                    
+                    // Toggle on click
+                    item.addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        
+                        // Remove active class from all items
+                        document.querySelectorAll('.contact-item').forEach(el => {
+                            el.classList.remove('active');
+                            el.querySelector('.contact-info').style.opacity = '0';
+                            el.querySelector('.contact-info').style.visibility = 'hidden';
+                        });
+                        
+                        // If this wasn't the active item, make it active
+                        if (!isActive) {
+                            item.classList.add('active');
+                            info.style.opacity = '1';
+                            info.style.visibility = 'visible';
+                        }
+                    });
+                });
+            }
+        }, 1000); // Check after 1 second
+    </script>
+</body>
+</html>
